@@ -173,7 +173,6 @@ Maze.recursiveBacktracker = function() {
 
         // If the current cell has any neighbours which have not been visited
         if (neighbors.length > 0) {
-          console.log('if');
           var randNeighbor = this.getRandomNeighbor(neighbors);
 
           // Push the current cell to the stack
@@ -187,7 +186,6 @@ Maze.recursiveBacktracker = function() {
           this.cells[current.xPos][current.yPos] = true;
         }
         else {
-          console.log('else');
           // Else if stack is not empty
           if (this.stack.length > 0) {
             // Pop a cell from the stack and Make it the current cell
