@@ -34,6 +34,7 @@ Maze.SVGDrawer = function() {
       rectangle.setAttribute('fill', 'white');
 
       this.SVGElement.appendChild(rectangle);
+      console.log('aqui');
     }
   }; 
 };
@@ -154,7 +155,7 @@ Maze.recursiveBacktracker = function() {
         height = 2;
       }
 
-      this.canvas.drawRectangle(xPos, yPos, 10, 20);
+      this.canvas.drawRectangle(xPos, yPos, width, height);
     },
 
     drawMaze: function() {
