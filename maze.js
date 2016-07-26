@@ -42,12 +42,8 @@ Maze.SVGDrawer = function() {
 
 
 Maze.recursiveBacktracker = function() {
-  // svg
   var canvas;
-
-  // matrix
   var cells;
-
   var stack;
 
   return {
@@ -158,8 +154,6 @@ Maze.recursiveBacktracker = function() {
         height = 2;
       }
 
-      console.log('xPos: ' + xPos + ' - ' + 'yPos: ' + yPos + ' - ' + 'width: ' + width + ' - ' + 'height: ' + height);
-      //this.canvas.drawRectangle(xPos, yPos, width, height);
       this.canvas.drawRectangle(xPos, yPos, 10, 20);
     },
 
@@ -172,10 +166,6 @@ Maze.recursiveBacktracker = function() {
       var randNeighbors = this.getRandomNeighbor(neighbors);
 
       this.removeWall(current, randNeighbors);
-
-//      console.log(current);
-//      console.log(neighbors);
-//      console.log(randNeighbors);
 
       // While there are unvisited cells
       while (this.stack.length > 0) {
@@ -206,7 +196,6 @@ Maze.recursiveBacktracker = function() {
         }
       }
     }
-
   };
 };
 // -----------------------------------------------------------------------------
